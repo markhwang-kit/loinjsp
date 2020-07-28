@@ -8,7 +8,7 @@
 
 	System.out.println(search);
 	
-	ArrayList<String> list =  NvSearchApi.search(search);
+	ArrayList<String> list =  NvSearchApi.search(search + " 날씨");
 
 
 	
@@ -21,9 +21,18 @@
 </head>
 <body>
 <h1> 날씨 정보</h1>
-<% for (String tit : list) { %>
-	<%=tit %> <br>
-<% } %>
+<% 
+for (int i=0; i<list.size(); i++) {
+	out.println(list.get(i) + "<br>");
+}
+
+for (String tit : list) {
+ 	out.println(tit + "<br>");
+}
+
+%>
+	
+
 
 </body>
 </html>

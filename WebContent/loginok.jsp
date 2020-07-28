@@ -8,7 +8,8 @@
 	System.out.println(id);
 	System.out.println(pw);
 
-	
+		
+	boolean isLogin = false;
 
 Connection conn = null;
 PreparedStatement pstmt = null;
@@ -27,6 +28,8 @@ try {
 	rs = pstmt.executeQuery();
 	if (rs.next()) {
 		System.out.println("로그인 성공");
+		isLogin = true;
+		session.setAttribute("name", rs.getString("name"));
 	} else {
 		System.out.println("로그인 실패");
 	}
