@@ -10,5 +10,6 @@
 <h1>회원 가입</h1>
 <a href="join.jsp">회원가입</a><br>
 <a href="login.jsp">로그인</a><br>
+<a href="search.jsp">날씨검색</a><br>
 </body>
 </html>
